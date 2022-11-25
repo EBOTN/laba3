@@ -31,3 +31,8 @@ jobs:
         run: coverage run tests.py
     - name: Tests report
       run: coverage report
+  build:
+    runs-on: self-hosted
+    needs: test
+    steps:
+        - uses: actions/checkout@v3
